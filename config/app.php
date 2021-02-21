@@ -161,6 +161,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        App\Repositories\Blog\BlogRepoServiceProvide::class,
+        App\Repositories\Category\CategoryRepoServiceProvide::class,
+        App\Repositories\Image\ImageRepoServiceProvide::class,
+        App\Repositories\ImageFolder\ImageFolderRepoServiceProvide::class,
+        App\Repositories\User\UserRepoServiceProvide::class,
 
         /*
          * Package Service Providers...
