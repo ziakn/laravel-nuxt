@@ -15,7 +15,24 @@ class CreateImageFoldersTable extends Migration
     {
         Schema::create('image_folders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('parent_id')->default(0);
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->integer('status')->default(1);
+            $table->softDeletes();
             $table->timestamps();
+
+
+
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+            $table->foreign('parent_id')
+            ->references('id')
+            ->on('image_folders')
+            ->onDelete('cascade');
         });
     }
 

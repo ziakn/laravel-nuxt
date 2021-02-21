@@ -15,6 +15,12 @@ class CreateBlogRepliesTable extends Migration
     {
         Schema::create('blog_replies', function (Blueprint $table) {
             $table->id();
+            $table->integer('blog_id');
+            $table->string('name')->nullable();
+            $table->text('comment')->nullable();
+            $table->string('email')->nullable();
+            $table->tinyInteger('status')->default(1);
+            $table->text('website')->nullable();
             $table->timestamps();
         });
     }

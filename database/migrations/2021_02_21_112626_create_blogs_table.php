@@ -15,6 +15,17 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('category_id');
+            $table->text('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
+            $table->tinyInteger('status')->default(1);
+            $table->integer('viewed')->default(0);
+            $table->integer('liked')->default(0);
+            $table->integer('meta_title')->nullable();
+            $table->integer('meta_tag')->nullable();
+            $table->integer('meta_description')->nullable();
             $table->timestamps();
         });
     }
