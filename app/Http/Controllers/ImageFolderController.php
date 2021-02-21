@@ -2,84 +2,59 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ImageFolder;
 use Illuminate\Http\Request;
+use App\Repositories\ImageFolder\ImageFolderInterface as ImageFolderInterface;
 
 class ImageFolderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    
+    public function __construct(ImageFolderInterface $imagefolder)
     {
-        //
+        $this->imagefolder = $imagefolder;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index(Request $request)
+    {
+        $data= $this->imagefolder->index($request);
+        return $data;
+    }
+
+    
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
-        //
+        $data = $this->imagefolder->store($request);
+        return $data;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ImageFolder  $imageFolder
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ImageFolder $imageFolder)
+   
+    public function show($id)
     {
-        //
+       
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ImageFolder  $imageFolder
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ImageFolder $imageFolder)
+    
+    public function edit($id)
     {
-        //
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ImageFolder  $imageFolder
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, ImageFolder $imageFolder)
+    
+    public function update(Request $request, $id)
     {
-        //
+        $data=$this->imagefolder->update($request, $id);
+        return $data;
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ImageFolder  $imageFolder
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ImageFolder $imageFolder)
+   
+    public function destroy($id)
     {
-        //
+        $data=$this->imagefolder->destroy($id);
+        return $data;
     }
 }

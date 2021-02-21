@@ -166,6 +166,7 @@ return [
         App\Repositories\Image\ImageRepoServiceProvide::class,
         App\Repositories\ImageFolder\ImageFolderRepoServiceProvide::class,
         App\Repositories\User\UserRepoServiceProvide::class,
+        App\Repositories\BlogReply\BlogReplyRepoServiceProvide::class,
 
         /*
          * Package Service Providers...
