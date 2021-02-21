@@ -36,7 +36,6 @@
             };
             @if(Auth::check())
                 window.authUser={!! Auth::user() !!}
-                 window.authUserRole={!! Auth::user()->userrole !!}
                 @else
                 window.authUser=false
                 @endif
