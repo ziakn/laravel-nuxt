@@ -59,9 +59,9 @@
                     })
     </script>
     {{-- <script src="{{ asset('firebase-messaging-sw.js') }}"></script> --}}
-    <script src="{{ asset('js/manifest.js') }}"></script>
-    <script src="{{ asset('js/vendor.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     {{-- <script src="http://localhost:9000/js/app.js"></script> --}}
 </body>
 

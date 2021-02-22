@@ -10523,20 +10523,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-var _state;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store({
-  state: (_state = {
+  state: {
     counter: 100,
     type: null,
     authUser: window.authUser,
-    authUserRole: window.authUserRole.role.rolepages
-  }, _defineProperty(_state, "authUserRole", 1), _defineProperty(_state, "load", false), _defineProperty(_state, "token", localStorage.getItem("token") || null), _defineProperty(_state, "notifications", []), _state),
+    load: false,
+    token: localStorage.getItem("token") || null,
+    notifications: []
+  },
 
   /*All getters*/
   getters: {
@@ -10558,9 +10556,6 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store({
     },
     noti: function noti(state) {
       return state.notifications;
-    },
-    authUserRole: function authUserRole(state) {
-      return state.authUserRole;
     }
   },
 

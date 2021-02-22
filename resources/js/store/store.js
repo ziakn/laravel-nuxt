@@ -6,8 +6,6 @@ const store = new Vuex.Store({
         counter: 100,
         type: null,
         authUser: window.authUser,
-        authUserRole: window.authUserRole.role.rolepages,
-        authUserRole: 1,
         load: false,
         token: localStorage.getItem("token") || null,
         notifications: [],
@@ -35,9 +33,7 @@ const store = new Vuex.Store({
         noti(state) {
             return state.notifications;
         },
-        authUserRole(state){
-            return state.authUserRole;
-        }
+       
 
     },
 
