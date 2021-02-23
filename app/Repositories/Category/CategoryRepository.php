@@ -43,7 +43,7 @@ class CategoryRepository implements CategoryInterface
         try {  
             $response['data']=Category::create(
                 [
-                    'user_id' => $request->auth_id,
+                    'user_id' => $auth_id,
                     'title' => $request->title,
                     'description' => $request->description,
                     'status' => 1,

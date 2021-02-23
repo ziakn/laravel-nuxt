@@ -7,6 +7,10 @@ import user from "./components/dashboard/user/Home.vue"
 import userlist from "./components/dashboard/user/UserList.vue"
 import rolelist from "./components/dashboard/user/RoleList.vue"
 
+
+import category from "./components/dashboard/category/Home.vue"
+import categorylist from "./components/dashboard/category/CategoryList.vue"
+
 import services from "./components/dashboard/services/Home.vue"
 import serviceslist from "./components/dashboard/services/ServicesList.vue"
 import servicesadd from "./components/dashboard/services/ServicesAdd.vue"
@@ -57,92 +61,116 @@ export default new Router({
                 }
             ]
         },
+        // {
+        //     path: "/user",
+        //     name: "user",
+        //     component: user,
+        //     meta: {
+        //         icon: "supervisor_account",
+        //         title: "User",
+        //         type: onlyAdmin,
+        //         status: true
+        //     },
+        //     children: [
+        //         {
+        //             path: "userlist",
+        //             name: "userlist",
+        //             component: userlist,
+        //             meta: {
+        //                 icon: "class",
+        //                 title: "User List",
+        //                 type: onlyAdmin,
+        //                 status: true
+        //             }
+        //         },
+        //         {
+        //             path: "rolelist",
+        //             name: "rolelist",
+        //             component: rolelist,
+        //             type: onlyAdmin,
+        //             meta: {
+        //                 icon: "class",
+        //                 title: "Role List",
+        //                  type: onlyAdmin,
+        //                 status: true
+        //             }
+        //         },
+               
+        //     ]
+        // },
+        
+        // {
+        //     path: "/services",
+        //     name: "services",
+        //     component: services,
+        //     meta: {
+        //         icon: "design_services",
+        //         title: "Services",
+        //         type: onlyAdmin,
+        //         status: true
+        //     },
+        //     children: [
+        //         {
+        //             path: "serviceslist",
+        //             name: "serviceslist",
+        //             component: serviceslist,
+        //             meta: {
+        //                 icon: "class",
+        //                 title: "Services List",
+        //                 type: onlyAdmin,
+        //                 status: true
+        //             }
+        //         },
+        //         {
+        //             path: 'servicesadd',
+        //             name: 'servicesadd',
+        //             component: servicesadd,
+        //             meta: {
+        //                 icon: 'class',
+        //                 title: "Services Add",
+        //                 type: onlyAdmin,
+        //                 status: true,
+        
+        //             }
+        //         },
+        //         {
+        //             path: 'servicesedit/:id',
+        //             name: 'servicesedit',
+        //             component: servicesedit,
+        //             props: true,
+        //             meta: {
+        //                 icon: 'class',
+        //                 title: "Services Edit",
+        //                 type: onlyAdmin,
+        //                 status: false,
+        
+        //             }
+        //         },
+               
+        //     ]
+        // },
         {
-            path: "/user",
-            name: "user",
-            component: user,
+            path: "/category",
+            name: "category",
+            component: category,
             meta: {
                 icon: "supervisor_account",
-                title: "User",
+                title: " Category",
                 type: onlyAdmin,
                 status: true
             },
             children: [
                 {
-                    path: "userlist",
-                    name: "userlist",
-                    component: userlist,
+                    path: "categorylist",
+                    name: "categorylist",
+                    component: categorylist,
                     meta: {
                         icon: "class",
-                        title: "User List",
+                        title: "Category List",
                         type: onlyAdmin,
                         status: true
                     }
                 },
-                {
-                    path: "rolelist",
-                    name: "rolelist",
-                    component: rolelist,
-                    type: onlyAdmin,
-                    meta: {
-                        icon: "class",
-                        title: "Role List",
-                         type: onlyAdmin,
-                        status: true
-                    }
-                },
-               
-            ]
-        },
-        
-        {
-            path: "/services",
-            name: "services",
-            component: services,
-            meta: {
-                icon: "design_services",
-                title: "Services",
-                type: onlyAdmin,
-                status: true
-            },
-            children: [
-                {
-                    path: "serviceslist",
-                    name: "serviceslist",
-                    component: serviceslist,
-                    meta: {
-                        icon: "class",
-                        title: "Services List",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: 'servicesadd',
-                    name: 'servicesadd',
-                    component: servicesadd,
-                    meta: {
-                        icon: 'class',
-                        title: "Services Add",
-                        type: onlyAdmin,
-                        status: true,
-        
-                    }
-                },
-                {
-                    path: 'servicesedit/:id',
-                    name: 'servicesedit',
-                    component: servicesedit,
-                    props: true,
-                    meta: {
-                        icon: 'class',
-                        title: "Services Edit",
-                        type: onlyAdmin,
-                        status: false,
-        
-                    }
-                },
-               
             ]
         },
         {
@@ -151,7 +179,7 @@ export default new Router({
             component: blogproject,
             meta: {
                 icon: "supervisor_account",
-                title: "Blog + Project",
+                title: " Project",
                 type: onlyAdmin,
                 status: true
             },
@@ -164,18 +192,6 @@ export default new Router({
                         icon: "class",
                         title: "Blog List",
                         type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "projectlist",
-                    name: "projectlist",
-                    component: projectlist,
-                    type: onlyAdmin,
-                    meta: {
-                        icon: "class",
-                        title: "Project List",
-                         type: onlyAdmin,
                         status: true
                     }
                 },
@@ -203,72 +219,72 @@ export default new Router({
                         status: true
                     }
                 },
-                {
-                    path: "banner",
-                    name: "banner",
-                    component: bannerlist,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Banner",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "social",
-                    name: "social",
-                    component: social,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Social",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "ourcustomer",
-                    name: "ourcustomer",
-                    component: ourcustomer,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Our Customer",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "contactus",
-                    name: "contactus",
-                    component: contactus,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Contactus",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "aboutus",
-                    name: "aboutus",
-                    component: aboutus,
-                    meta: {
-                        icon: "dashboard",
-                        title: "About Us",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
-                {
-                    path: "ourteam",
-                    name: "ourteam",
-                    component: ourteam,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Our Team",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                },
+                // {
+                //     path: "banner",
+                //     name: "banner",
+                //     component: bannerlist,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "Banner",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
+                // {
+                //     path: "social",
+                //     name: "social",
+                //     component: social,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "Social",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
+                // {
+                //     path: "ourcustomer",
+                //     name: "ourcustomer",
+                //     component: ourcustomer,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "Our Customer",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
+                // {
+                //     path: "contactus",
+                //     name: "contactus",
+                //     component: contactus,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "Contactus",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
+                // {
+                //     path: "aboutus",
+                //     name: "aboutus",
+                //     component: aboutus,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "About Us",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
+                // {
+                //     path: "ourteam",
+                //     name: "ourteam",
+                //     component: ourteam,
+                //     meta: {
+                //         icon: "dashboard",
+                //         title: "Our Team",
+                //         type: onlyAdmin,
+                //         status: true
+                //     }
+                // },
                 
             ]
         }

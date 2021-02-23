@@ -23,9 +23,9 @@ class CreateBlogsTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->integer('viewed')->default(0);
             $table->integer('liked')->default(0);
-            $table->integer('meta_title')->nullable();
-            $table->integer('meta_tag')->nullable();
-            $table->integer('meta_description')->nullable();
+            $table->text('meta_title')->nullable();
+            $table->string('meta_tag')->nullable();
+            $table->text('meta_description')->nullable();
             $table->timestamps();
         });
     }

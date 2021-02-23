@@ -38,6 +38,8 @@
 
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogList.vue?vue&type=script&lang=js& */
 
+/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CategoryList.vue?vue&type=script&lang=js& */
+
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ContactUs.vue?vue&type=script&lang=js& */
 
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OurCustomer.vue?vue&type=script&lang=js& */
@@ -68,6 +70,8 @@
 
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogList.vue?vue&type=template&id=29e2c97e& */
 
+/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CategoryList.vue?vue&type=template&id=1e5ac097& */
+
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ContactUs.vue?vue&type=template&id=e6efe3ee& */
 
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=093685e6& */
@@ -75,6 +79,8 @@
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=42df9c84& */
 
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=8ae7b64c& */
+
+/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=b372a78c& */
 
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=cc243306& */
 
@@ -220,6 +226,10 @@
 
 /*! ./Cancel */
 
+/*! ./CategoryList.vue?vue&type=script&lang=js& */
+
+/*! ./CategoryList.vue?vue&type=template&id=1e5ac097& */
+
 /*! ./ContactUs.vue?vue&type=script&lang=js& */
 
 /*! ./ContactUs.vue?vue&type=template&id=e6efe3ee& */
@@ -251,6 +261,8 @@
 /*! ./Home.vue?vue&type=template&id=42df9c84& */
 
 /*! ./Home.vue?vue&type=template&id=8ae7b64c& */
+
+/*! ./Home.vue?vue&type=template&id=b372a78c& */
 
 /*! ./Home.vue?vue&type=template&id=cc243306& */
 
@@ -593,6 +605,10 @@
 /*! ./components/dashboard/blogproject/Home.vue */
 
 /*! ./components/dashboard/blogproject/ProjectList.vue */
+
+/*! ./components/dashboard/category/CategoryList.vue */
+
+/*! ./components/dashboard/category/Home.vue */
 
 /*! ./components/dashboard/overview/overview.vue */
 
@@ -2315,6 +2331,10 @@
   \*************************************************************/
 
 /*!*************************************************************!*\
+  !*** ./resources/js/components/dashboard/category/Home.vue ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
   !*** ./resources/js/components/dashboard/services/Home.vue ***!
   \*************************************************************/
 
@@ -2675,6 +2695,10 @@
   \*********************************************************************/
 
 /*!*********************************************************************!*\
+  !*** ./resources/js/components/dashboard/category/CategoryList.vue ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
   !*** ./resources/js/components/dashboard/services/ServicesEdit.vue ***!
   \*********************************************************************/
 
@@ -2915,6 +2939,10 @@
   \********************************************************************************************/
 
 /*!********************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/category/Home.vue?vue&type=template&id=b372a78c& ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
   !*** ./resources/js/components/dashboard/services/Home.vue?vue&type=template&id=8ae7b64c& ***!
   \********************************************************************************************/
 
@@ -2945,6 +2973,10 @@
 /*!*********************************************************************************************!*\
   !*** ./resources/js/components/dashboard/setting/Social.vue?vue&type=template&id=b88c4e5c& ***!
   \*********************************************************************************************/
+
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/category/CategoryList.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
 
 /*!**********************************************************************************************!*\
   !*** ./resources/js/components/dashboard/services/ServicesEdit.vue?vue&type=script&lang=js& ***!
@@ -2993,6 +3025,10 @@
 /*!***************************************************************************************************!*\
   !*** ./resources/js/components/dashboard/services/ServicesAdd.vue?vue&type=template&id=c5c18b90& ***!
   \***************************************************************************************************/
+
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/category/CategoryList.vue?vue&type=template&id=1e5ac097& ***!
+  \****************************************************************************************************/
 
 /*!****************************************************************************************************!*\
   !*** ./resources/js/components/dashboard/services/ServicesEdit.vue?vue&type=template&id=9ae297fa& ***!
@@ -3135,6 +3171,10 @@
   \**********************************************************************************************************************************************************************************************************************************/
 
 /*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/category/Home.vue?vue&type=template&id=b372a78c& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+
+/*!***********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/services/Home.vue?vue&type=template&id=8ae7b64c& ***!
   \***********************************************************************************************************************************************************************************************************************************/
 
@@ -3179,6 +3219,10 @@
   \*************************************************************************************************************************************************************************************************************************************/
 
 /*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/category/CategoryList.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+
+/*!**************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/services/ServicesEdit.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************************************************************************/
 
@@ -3213,6 +3257,10 @@
 /*!******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/services/ServicesAdd.vue?vue&type=template&id=c5c18b90& ***!
   \******************************************************************************************************************************************************************************************************************************************/
+
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/category/CategoryList.vue?vue&type=template&id=1e5ac097& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 
 /*!*******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/services/ServicesEdit.vue?vue&type=template&id=9ae297fa& ***!

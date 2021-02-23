@@ -19,9 +19,9 @@ class CreateCategoriesTable extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->tinyInteger('status')->default(1);
-            $table->integer('meta_title')->nullable();
-            $table->integer('meta_tag')->nullable();
-            $table->integer('meta_description')->nullable();
+            $table->string('meta_title')->nullable();
+            $table->string('meta_tag')->nullable();
+            $table->text('meta_description')->nullable();
             $table->timestamps();
         });
     }
