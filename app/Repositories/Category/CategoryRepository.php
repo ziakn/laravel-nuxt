@@ -21,7 +21,7 @@ class CategoryRepository implements CategoryInterface
         }
         else
         {
-            $data=$data->paginate(20);
+            $data=$data->get();
         }
         return $data;
     }

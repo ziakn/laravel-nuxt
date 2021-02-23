@@ -67,29 +67,55 @@
 									<v-container grid-list-md>
 										<v-layout wrap>
 											<v-col cols="12">
+												<v-select
+													:rules="[v => !!v || 'Category is required']"
+													v-model="editedItem.category_id"
+													label="Category"
+													:items="dataCategory"
+													 outlined 
+                                                    item-text="title"
+													item-value="id"
+												></v-select>
+											</v-col>
+											<v-col cols="12">
 												<v-text-field
-													:rules="[v => !!v || 'Title  En is required']"
-													v-model="editedItem.title_en"
-													label="Title En*"
-													outlined 
-                                        			dense
+													:rules="[v => !!v || 'Title is required']"
+													v-model="editedItem.title"
+													label="Title"
+													 outlined 
+                                                    v-on:keyup="titlemonitor"
 												></v-text-field>
 											</v-col>
-												<v-col cols="12">
-												<v-text-field
-													:rules="[v => !!v || 'Title Ar is required']"
-													v-model="editedItem.title_ar"
-													label="Title Ar*"
-													outlined 
-                                        			dense
-												></v-text-field>
+											<v-col cols="12">
+												<v-textarea 
+                                                    v-model="editedItem.description" 
+                                                    label="Description"
+                                                     outlined 
+                                                     v-on:keyup="descriptionmonitor"
+                                                ></v-textarea>
 											</v-col>
-                                            <v-col sm="12" md="12" lg="12">
-                                            <v-textarea v-model="editedItem.description_en" label="Description En" outlined  dense></v-textarea>
-                                            </v-col>
-                                            <v-col sm="12" md="12" lg="12">
-                                            <v-textarea v-model="editedItem.description_ar" label="Description Ar" outlined dense></v-textarea>
-                                            </v-col>
+                                            <v-col cols="12">
+												<v-text-field 
+                                                    v-model="editedItem.meta_title" 
+                                                    label="Meta Title"
+                                                     outlined 
+
+                                                ></v-text-field>
+											</v-col>
+                                            <v-col cols="12">
+												<v-text-field 
+                                                    v-model="editedItem.meta_tag" 
+                                                    label="Meta Tag"
+                                                     outlined 
+                                                ></v-text-field>
+											</v-col>
+                                            <v-col cols="12">
+												<v-textarea 
+                                                    v-model="editedItem.meta_description" 
+                                                    label="Meta Description"
+                                                     outlined 
+                                                ></v-textarea>
+											</v-col>
 											<v-col cols="12">
 												<v-card
 													class="mx-auto"
@@ -174,24 +200,32 @@ export default {
 		edit: true,
 		dialog: false,
         dataList: [],
+		dataCategory: [],
 		headers: 
 		[
 
 			{ text: "Image", value: "image" },
-			{ text: "Title", value: "title_en" },
-			{ text: "Description", value: "description_en" },
+			{ text: "Title", value: "title" },
+			{ text: "Description", value: "description" },
+			{ text: "Viewed", value: "viewed" },
+			{ text: "Liked", value: "liked" },
 			{ text: "Status", value: "status" },
 			{ text: "Action", value: "action" }
 		],
 		editedIndex: -1,
 		editedItem: 
 		{
-			title_en: "",
-            title_ar: "",
-            description_en:"",
-            description_ar:"",
+			title: "",
+            description: "",
+            viewed:"",
+            liked:"",
 			image:"",
 			status: 1,
+			meta_title: "",
+            meta_tag: "",
+            meta_description: "",
+			category_id: "",
+
 		},
 		dataIndex: null,
 		deleteTitle: "",
@@ -199,12 +233,16 @@ export default {
 		isDelete:false,
 		defaultItem: 
 		{
-			title_en: "",
-            title_ar: "",
-            description_en:"",
-            description_ar:"",
+			title: "",
+            description: "",
+            viewed:"",
+            liked:"",
 			image:"",
 			status: 1,
+			meta_title: "",
+            meta_tag: "",
+            meta_description: "",
+			category_id: "",
 		},
 		dataStatus: 
 		[
@@ -242,6 +280,15 @@ export default {
 	},
 	
 	methods: {
+
+		titlemonitor()
+        {   
+            return this.editedItem.meta_title=this.editedItem.title
+        },
+        descriptionmonitor()
+        {
+            return this.editedItem.meta_description=this.editedItem.description
+        },
 		async changeStatus(i)
 		{
 			this.loading = true;
@@ -286,6 +333,20 @@ export default {
 
 		async initialize() 
 		{
+			try 
+			{
+				let { data } = await axios({
+					method: "get",
+					url: "/app/category",
+				});
+				this.dataCategory=data
+				
+			} 
+			catch (e) 
+			{
+				this.snacks("Error, Server issue", "red");
+				this.loading = false;
+			}
 			this.getBlog();        
 		},
 
@@ -340,7 +401,7 @@ export default {
 		},
 		async save() 
 		{
-			 if (!this.editedItem.title_en || !this.editedItem.title_ar ) 
+			 if (!this.editedItem.title || !this.editedItem.description ) 
 			 {
 				return
 			 }

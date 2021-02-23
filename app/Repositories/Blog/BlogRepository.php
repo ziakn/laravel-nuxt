@@ -43,7 +43,7 @@ class BlogRepository implements BlogInterface
         try {  
             $create=Blog::create(
                 [
-                    'user_id' => $request->auth_id,
+                    'user_id' => $auth_id,
                     'category_id' => $request->category_id,
                     'title' => $request->title,
                     'description' => $request->description,

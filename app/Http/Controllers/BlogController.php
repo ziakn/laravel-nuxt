@@ -39,7 +39,7 @@ class BlogController extends Controller
     }
 
     
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
          $data=$this->blog->edit($request, $id);
         return $data;
