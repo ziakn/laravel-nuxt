@@ -29,6 +29,9 @@
 								height="80"
 							></v-img>
 						</template>
+							<template v-slot:[`item.category_id`]="{ item }">
+                                   {{item.category.title}}
+                            </template>
 						  <template v-slot:[`item.status`]="{ item }">
                                     <v-switch v-model="item.status" @change="changeStatus(item)" color="primary" inset></v-switch>
                                 </template>
@@ -53,7 +56,7 @@
 			<v-btn bottom color="primary" dark fab fixed right @click="dialog = !dialog">
 				<v-icon>add</v-icon>
 			</v-btn>
-            <v-dialog v-model="dialog" max-width="700px" persistent>
+            <v-dialog v-model="dialog" max-width="800px" persistent>
 							<v-card>
 							<ImageModule :toggle="isImage" @send="receiveImage" @cancel="cancel"/>
 								<v-card color="secondary" dark :tile="true" flat >
@@ -87,12 +90,7 @@
 												></v-text-field>
 											</v-col>
 											<v-col cols="12">
-												<v-textarea 
-                                                    v-model="editedItem.description" 
-                                                    label="Description"
-                                                     outlined 
-                                                     v-on:keyup="descriptionmonitor"
-                                                ></v-textarea>
+												<quill-editor v-model="editedItem.description" />
 											</v-col>
                                             <v-col cols="12">
 												<v-text-field 
@@ -206,7 +204,8 @@ export default {
 
 			{ text: "Image", value: "image" },
 			{ text: "Title", value: "title" },
-			{ text: "Description", value: "description" },
+			{ text: "Category", value: "category_id" },
+			// { text: "Description", value: "description" },
 			{ text: "Viewed", value: "viewed" },
 			{ text: "Liked", value: "liked" },
 			{ text: "Status", value: "status" },

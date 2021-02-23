@@ -13,6 +13,20 @@
  */
 
 /*!
+ * Quill Editor v1.3.7
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
@@ -21,6 +35,12 @@
 /*! !!../../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./materialdesignicons.css */
 
 /*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./material-design-icons.css */
+
+/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.bubble.css */
+
+/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.core.css */
+
+/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.snow.css */
 
 /*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */
 
@@ -1106,6 +1126,10 @@
 
 /*! babel-polyfill */
 
+/*! base64-js */
+
+/*! buffer */
+
 /*! core-js/fn/regexp/escape */
 
 /*! core-js/shim */
@@ -1114,11 +1138,25 @@
 
 /*! es6-promise */
 
+/*! ieee754 */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! isarray */
+
 /*! lodash */
 
 /*! material-design-icons-iconfont/dist/material-design-icons.css */
 
 /*! process/browser */
+
+/*! quill */
+
+/*! quill/dist/quill.bubble.css */
+
+/*! quill/dist/quill.core.css */
+
+/*! quill/dist/quill.snow.css */
 
 /*! regenerator-runtime */
 
@@ -1127,6 +1165,8 @@
 /*! vue */
 
 /*! vue-moment */
+
+/*! vue-quill-editor */
 
 /*! vue-router */
 
@@ -1167,8 +1207,20 @@
   \*************************************/
 
 /*!**************************************!*\
+  !*** ./node_modules/buffer/index.js ***!
+  \**************************************/
+
+/*!**************************************!*\
   !*** ./node_modules/core-js/shim.js ***!
   \**************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/ieee754/index.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/isarray/index.js ***!
+  \***************************************/
 
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -1183,12 +1235,20 @@
   \*****************************************/
 
 /*!*****************************************!*\
+  !*** ./node_modules/base64-js/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
   \*****************************************/
 
 /*!*****************************************!*\
   !*** ./resources/js/plugins/vuetify.js ***!
   \*****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/quill/dist/quill.js ***!
+  \******************************************/
 
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
@@ -1270,6 +1330,14 @@
   !*** ./node_modules/core-js/modules/_typed.js ***!
   \************************************************/
 
+/*!************************************************!*\
+  !*** ./node_modules/quill/dist/quill.core.css ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/quill/dist/quill.snow.css ***!
+  \************************************************/
+
 /*!*************************************************!*\
   !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
   \*************************************************/
@@ -1344,6 +1412,10 @@
 
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/es7.asap.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/quill/dist/quill.bubble.css ***!
   \**************************************************/
 
 /*!***************************************************!*\
@@ -2551,6 +2623,10 @@
   \****************************************************************/
 
 /*!****************************************************************!*\
+  !*** ./node_modules/vue-quill-editor/dist/vue-quill-editor.js ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
   !*** ./resources/js/components/dashboard/blogproject/Home.vue ***!
   \****************************************************************/
 
@@ -3041,6 +3117,18 @@
 /*!******************************************************************************************************!*\
   !*** ./resources/js/components/dashboard/blogproject/ProjectList.vue?vue&type=template&id=1f893dae& ***!
   \******************************************************************************************************/
+
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.core.css ***!
+  \********************************************************************************************************************************************************************************************************/
+
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.snow.css ***!
+  \********************************************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.bubble.css ***!
+  \**********************************************************************************************************************************************************************************************************/
 
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/Footer.vue?vue&type=script&lang=js& ***!
