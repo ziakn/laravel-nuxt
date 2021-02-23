@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
@@ -23,10 +24,14 @@ use App\Http\Controllers\SessionController;
 
 
 
+require __DIR__.'/auth.php';
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
@@ -51,12 +56,12 @@ Route::middleware(['auth'])->prefix('/app')->group(function () {
     Route::resource('/blog',  BlogController::class);
     Route::resource('/ourteam',  OurTeamController::class);
     Route::resource('/session',  SessionController::class);
+    Route::resource('/ourfeaturesol',  OurFeaturedSolController::class);
   
 
     Route::post('/changepassword', [UserController::class, 'changePass']);
     Route::post('/avatar', [UserController::class, 'avatar']);
     Route::get('/profile', [UserController::class, 'profile']);
-    // Route::get('/session', [UserController::class, 'session']);
 });
 
 
@@ -65,6 +70,6 @@ Route::middleware(['auth'])->prefix('/app')->group(function () {
 // Auth::routes();
 
 Route::middleware(['auth'])->get('/home', [HomeController::class, 'index']);
-Route::middleware(['auth' ])->get('/{slug}', [HomeController::class, 'index']);
+Route::middleware(['auth'])->get('/{slug}', [HomeController::class, 'index']);
 Route::middleware(['auth'])->get('/{slug}/{child}', [HomeController::class, 'index']);
 Route::middleware(['auth'])->get('/{slug}/{child}/{id}', [HomeController::class, 'index']);

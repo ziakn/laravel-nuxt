@@ -36,7 +36,7 @@ Vue.use(require('vue-moment'));
 
 router.afterEach((to, from) => {
     Vue.nextTick(() => {
-        document.title = to.meta.title ? to.meta.title : 'Al-Mahabra';
+        document.title = to.meta.title ? to.meta.title : 'Al-Sharq Technology';
     });
 })
 

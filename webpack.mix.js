@@ -1,10 +1,15 @@
 const mix = require('laravel-mix');
 
+
 mix.webpackConfig({
     watchOptions: {
       ignored: /node_modules/
-    }
+    },
+    optimization: {
+        minimize: true
+      }
   })
+
 
 
 mix.js('resources/js/app.js', 'public/js')
@@ -17,7 +22,11 @@ mix.js('resources/js/app.js', 'public/js')
     .version()
     .vue();
 
+// mix.styles([
+//     'public/css/app.css',
+//     'public/css/style.css'
+// ], 'public/css/all.css');
+
 if (mix.inProduction()) {
     mix.version();
 }
-
