@@ -37,30 +37,30 @@ Vue.use(Router);
 export default new Router({
     mode: "history",
     routes: [
-        {
-            path: "/home",
-            name: "home",
-            component: overview,
-            meta: {
-                icon: "dashboard",
-                title: "Dashboard",
-                type: onlyAdmin,
-                status: true
-            },
-            children: [
-                {
-                    path: "overview",
-                    name: "overview",
-                    component: overview,
-                    meta: {
-                        icon: "dashboard",
-                        title: "Overview",
-                        type: onlyAdmin,
-                        status: true
-                    }
-                }
-            ]
-        },
+        // {
+        //     path: "/home",
+        //     name: "home",
+        //     component: overview,
+        //     meta: {
+        //         icon: "dashboard",
+        //         title: "Dashboard",
+        //         type: onlyAdmin,
+        //         status: true
+        //     },
+        //     children: [
+        //         {
+        //             path: "overview",
+        //             name: "overview",
+        //             component: overview,
+        //             meta: {
+        //                 icon: "dashboard",
+        //                 title: "Overview",
+        //                 type: onlyAdmin,
+        //                 status: true
+        //             }
+        //         }
+        //     ]
+        // },
         // {
         //     path: "/user",
         //     name: "user",
