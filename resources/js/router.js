@@ -18,7 +18,7 @@ import servicesedit from "./components/dashboard/services/ServicesEdit.vue"
 
 import blogproject from "./components/dashboard/blogproject/Home.vue"
 import bloglist from "./components/dashboard/blogproject/BlogList.vue"
-import projectlist from "./components/dashboard/blogproject/ProjectList.vue"
+import blogreply from "./components/dashboard/blogproject/BlogReply.vue"
 
 import setting from "./components/dashboard/setting/Home.vue"
 import profile from "./components/dashboard/setting/Profile.vue"
@@ -191,6 +191,17 @@ export default new Router({
                     meta: {
                         icon: "class",
                         title: "Blog List",
+                        type: onlyAdmin,
+                        status: true
+                    }
+                },
+                {
+                    path: "blogreply",
+                    name: "blogreply",
+                    component: blogreply,
+                    meta: {
+                        icon: "class",
+                        title: "Blog Reply",
                         type: onlyAdmin,
                         status: true
                     }

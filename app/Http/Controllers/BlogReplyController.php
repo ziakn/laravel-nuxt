@@ -40,7 +40,7 @@ class BlogReplyController extends Controller
     }
 
     
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
          $data=$this->blogreply->edit($request, $id);
         return $data;

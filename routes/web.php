@@ -7,6 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ImageFolderController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\BlogReplyController;
 
 
 
@@ -33,6 +35,7 @@ Route::middleware(['auth'])->prefix('/app')->group(function () {
     Route::resource('/folder', ImageFolderController::class);
     Route::resource('/image',  ImageController::class);
     Route::resource('/blog',  BlogController::class);
+    Route::resource('/blogreply',  BlogReplyController::class);
   
 
     Route::post('/changepassword', [UserController::class, 'changePass']);

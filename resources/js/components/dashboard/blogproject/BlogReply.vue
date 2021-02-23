@@ -33,7 +33,6 @@
                                     <v-switch v-model="item.status" @change="changeStatus(item)" color="primary" inset></v-switch>
                                 </template>
 						<template v-slot:[`item.action`]="{ item }">
-							<v-icon color="blue"  medium @click="editItem(item)" >edit</v-icon>
 							<v-icon color="red"  medium @click="deleteItem(item)" >delete</v-icon>
 						</template>
 						<template v-slot:no-data>
@@ -44,95 +43,12 @@
                         <v-pagination
                                 v-model="filters.page"
                                 :length="pageCount"
-                                @input="getProject"
+                                @input="getBlogReply"
                         ></v-pagination>
                     </div>
 				</v-col>
 			</v-row>
 			<DeleteModal :trigger="isDelete" :title="deleteTitle" :body="deleteBody" @request="remove"></DeleteModal>
-			<v-btn bottom color="primary" dark fab fixed right @click="dialog = !dialog">
-				<v-icon>add</v-icon>
-			</v-btn>
-            <v-dialog v-model="dialog" max-width="700px" persistent>
-							<v-card>
-							<ImageModule :toggle="isImage" @send="receiveImage" @cancel="cancel"/>
-								<v-card color="secondary" dark :tile="true" flat >
-									<v-card-title
-									class="headline"
-									v-text="formTitle"
-									></v-card-title>
-								</v-card >
-
-								<v-card-text>
-									<v-container grid-list-md>
-										<v-layout wrap>
-											<v-col cols="12">
-												<v-text-field
-													:rules="[v => !!v || 'Title  En is required']"
-													v-model="editedItem.title_en"
-													label="Title En*"
-													outlined 
-                                        			dense
-												></v-text-field>
-											</v-col>
-												<v-col cols="12">
-												<v-text-field
-													:rules="[v => !!v || 'Title Ar is required']"
-													v-model="editedItem.title_ar"
-													label="Title Ar*"
-													outlined 
-                                        			dense
-												></v-text-field>
-											</v-col>
-                                            <v-col sm="12" md="12" lg="12">
-                                            <v-textarea v-model="editedItem.description_en" label="Description En" outlined  dense></v-textarea>
-                                            </v-col>
-                                            <v-col sm="12" md="12" lg="12">
-                                            <v-textarea v-model="editedItem.description_ar" label="Description Ar" outlined dense></v-textarea>
-                                            </v-col>
-											<v-col cols="12">
-												<v-card
-													class="mx-auto"
-													width="180"
-													outlined 
-                                        			dense
-													align="center"
-													justify="center"
-												>
-												<v-img
-												:src="editedItem.image?editedItem.image:'/images/plus.png'"
-												aspect-ratio="1"
-												@click="isImage=!isImage"
-												>
-												</v-img>
-												<v-card-subtitle v-if="!editedItem.image">Add image</v-card-subtitle>
-												<v-card-text v-else class="my-2">
-													<v-btn x-small color="primary" @click="isImage=!isImage">
-														Change
-													</v-btn>
-													<v-btn x-small color="primary" @click="editedItem.image=''">
-														Remove
-													</v-btn>
-												</v-card-text>
-												</v-card>
-											</v-col>
-										</v-layout>
-									</v-container>
-								</v-card-text>
-
-								<v-card-actions>
-									<v-spacer></v-spacer>
-									<v-btn color="error" text @click="close">Cancel</v-btn>
-									<v-btn
-										color="primary"
-										:loading="loading"
-										:disabled="loading"
-										text
-										@click="save"
-									>Save</v-btn>
-								</v-card-actions>
-							</v-card>
-						</v-dialog>
 		</v-container>
 			<v-snackbar
         v-model="snackbar"
@@ -153,14 +69,12 @@
 <script>
 import DeleteModal from "./../../common/DeleteModal";
 import NoDataList from "./../../common/NoDataList"
-import ImageModule from "./../../common/ImageModule"
 import Breadcrumbs from "./../../common/Breadcrumbs"
 import ToolbarLeft from "./../../common/ToolbarLeft"
 export default {
 	components: {
 		DeleteModal,
 		NoDataList,
-        ImageModule,
         ToolbarLeft,
         Breadcrumbs
 	},
@@ -177,10 +91,11 @@ export default {
 		headers: 
 		[
 
-			{ text: "Image", value: "image" },
-			{ text: "Title", value: "title_en" },
-			{ text: "Description", value: "description_en" },
+			{ text: "Name", value: "name" },
+			{ text: "Comment", value: "comment" },
+			{ text: "Email", value: "email" },
 			{ text: "Status", value: "status" },
+			{ text: "Website", value: "website" },
 			{ text: "Action", value: "action" }
 		],
 		editedIndex: -1,
@@ -228,10 +143,7 @@ export default {
 
 	computed: 
 	{
-		formTitle() 
-		{
-			return this.editedIndex === -1 ? "New  Project" : "Edit  Project";
-		}
+		
 	},
 	
 	watch: {},
@@ -249,7 +161,7 @@ export default {
 			{
 				let { data } = await axios({
 					method: "get",
-					url: "/app/project/"+i.id+"/edit",
+					url: "/app/blogreply/"+i.id+"/edit",
 					params:{
 						status: i.status
 					},
@@ -273,30 +185,21 @@ export default {
 
 
 		},
-		cancel()
-		{
-			this.isImage=!this.isImage;
-
-		},
-		receiveImage(item)
-		{
-			this.isImage=!this.isImage;
-			this.editedItem.image=item.src
-		},
+		
 
 		async initialize() 
 		{
-			this.getProject();        
+			this.getBlogReply();        
 		},
 
-		async getProject()
+		async getBlogReply()
 		{
 			this.start();
 			try 
 			{
 				let { data } = await axios({
 					method: "get",
-					url: "/app/project",
+					url: "/app/blogreply",
 				 params: this.filters
 				});
 				this.dataList = data.data;
@@ -314,13 +217,7 @@ export default {
 			}
 		},
 
-		editItem(item) 
-		{
-			this.edit = false;
-			this.editedIndex = this.dataList.indexOf(item);
-			this.editedItem = Object.assign({}, item);
-			this.dialog = true;
-		},
+		
 
 		deleteItem(item) 
 		{
@@ -351,7 +248,7 @@ export default {
 				{
 					let { data } = await axios({
 						method: "put",
-						url: "/app/project/" + this.editedItem.id,
+						url: "/app/blogreply/" + this.editedItem.id,
 						data: this.editedItem
 					});
 					if (data.status) 
@@ -379,7 +276,7 @@ export default {
 					
 					let { data } = await axios({
 						method: "post",
-						url: "/app/project",
+						url: "/app/blogreply",
 						data: this.editedItem
 					});
 					if (data.status) 
@@ -406,7 +303,7 @@ export default {
 			try {
 				let { data } = await axios({
 					method: "delete",
-					url: "/app/project/" + this.dataList[this.dataIndex].id
+					url: "/app/blogreply/" + this.dataList[this.dataIndex].id
 				});
 				if (data.status) {
 					this.snacks('Successfully Done','green')
