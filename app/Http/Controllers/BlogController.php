@@ -35,7 +35,9 @@ class BlogController extends Controller
    
     public function show($id)
     {
-       
+       $data=$this->blog->show($id);
+        // dd($data);
+       return $data;
     }
 
     

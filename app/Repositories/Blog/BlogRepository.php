@@ -76,7 +76,8 @@ class BlogRepository implements BlogInterface
    
     public function show($id)
     {
-        
+        $data = Blog::find($id);
+        return $data;
     }
 
     
