@@ -13,7 +13,12 @@ class BlogRepository implements BlogInterface
 {
     public function index($request)
     {
-        $data=Blog::orderBy('id','DESC')->with('category');    
+        $data=Blog::orderBy('id','DESC')->with('category');
+        if(isset($request->category_id) && !empty($request->category_id))
+        {
+            // dd($request->category_id);
+            $data=$data->where('category_id', $request->category_id);
+        }    
         if(isset($request->show) && !empty($request->show))
         {
             $show=$request->show;
