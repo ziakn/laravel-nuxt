@@ -2,7 +2,7 @@
   <v-app-bar  :clipped-left="$vuetify.breakpoint.lgAndUp" app color="secondary" dark >
     <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
       <v-app-bar-nav-icon @click="drawerTrigger"></v-app-bar-nav-icon>
-      <span class="hidden-sm-and-down">Al Sharq Technology </span>
+      <span class="hidden-sm-and-down">Blog </span>
     </v-toolbar-title>
     <div class="flex-grow-1"></div>
     <v-btn icon large>
