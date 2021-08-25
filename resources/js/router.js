@@ -7,9 +7,9 @@ import category from "./components/dashboard/category/Home.vue"
 import categorylist from "./components/dashboard/category/CategoryList.vue"
 
 
-import blogproject from "./components/dashboard/blogproject/Home.vue"
-import bloglist from "./components/dashboard/blogproject/BlogList.vue"
-import blogreply from "./components/dashboard/blogproject/BlogReply.vue"
+import blog from "./components/dashboard/Blog/Home.vue"
+import bloglist from "./components/dashboard/Blog/BlogList.vue"
+import blogreply from "./components/dashboard/Blog/BlogReply.vue"
 
 import setting from "./components/dashboard/setting/Home.vue"
 import profile from "./components/dashboard/setting/Profile.vue"
@@ -48,9 +48,9 @@ export default new Router({
             ]
         },
         {
-            path: "/blogproject",
-            name: "blogproject",
-            component: blogproject,
+            path: "/blog",
+            name: "blog",
+            component: blog,
             meta: {
                 icon: "supervisor_account",
                 title: " Project",
