@@ -56,107 +56,7 @@
 			<v-btn bottom color="primary" dark fab fixed right @click="dialog = !dialog">
 				<v-icon>add</v-icon>
 			</v-btn>
-            <v-dialog v-model="dialog" max-width="800px" persistent>
-							<v-card>
-							<ImageModule :toggle="isImage" @send="receiveImage" @cancel="cancel"/>
-								<v-card color="secondary" dark :tile="true" flat >
-									<v-card-title
-									class="headline"
-									v-text="formTitle"
-									></v-card-title>
-								</v-card >
-
-								<v-card-text>
-									<v-container grid-list-md>
-										<v-layout wrap>
-											<v-col cols="12">
-												<v-select
-													:rules="[v => !!v || 'Category is required']"
-													v-model="editedItem.category_id"
-													label="Category"
-													:items="dataCategory"
-													 outlined 
-                                                    item-text="title"
-													item-value="id"
-												></v-select>
-											</v-col>
-											<v-col cols="12">
-												<v-text-field
-													:rules="[v => !!v || 'Title is required']"
-													v-model="editedItem.title"
-													label="Title"
-													 outlined 
-                                                    v-on:keyup="titlemonitor"
-												></v-text-field>
-											</v-col>
-											<v-col cols="12">
-												<quill-editor v-model="editedItem.description" />
-											</v-col>
-                                            <v-col cols="12">
-												<v-text-field 
-                                                    v-model="editedItem.meta_title" 
-                                                    label="Meta Title"
-                                                     outlined 
-
-                                                ></v-text-field>
-											</v-col>
-                                            <v-col cols="12">
-												<v-text-field 
-                                                    v-model="editedItem.meta_tag" 
-                                                    label="Meta Tag"
-                                                     outlined 
-                                                ></v-text-field>
-											</v-col>
-                                            <v-col cols="12">
-												<v-textarea 
-                                                    v-model="editedItem.meta_description" 
-                                                    label="Meta Description"
-                                                     outlined 
-                                                ></v-textarea>
-											</v-col>
-											<v-col cols="12">
-												<v-card
-													class="mx-auto"
-													width="180"
-													outlined 
-                                        			dense
-													align="center"
-													justify="center"
-												>
-												<v-img
-												:src="editedItem.image?editedItem.image:'/images/plus.png'"
-												aspect-ratio="1"
-												@click="isImage=!isImage"
-												>
-												</v-img>
-												<v-card-subtitle v-if="!editedItem.image">Add image</v-card-subtitle>
-												<v-card-text v-else class="my-2">
-													<v-btn x-small color="primary" @click="isImage=!isImage">
-														Change
-													</v-btn>
-													<v-btn x-small color="primary" @click="editedItem.image=''">
-														Remove
-													</v-btn>
-												</v-card-text>
-												</v-card>
-											</v-col>
-										</v-layout>
-									</v-container>
-								</v-card-text>
-
-								<v-card-actions>
-									<v-spacer></v-spacer>
-									<v-btn color="error" text @click="close">Cancel</v-btn>
-									<v-btn
-										color="primary"
-										:loading="loading"
-										:disabled="loading"
-										text
-										@click="save"
-									>Save</v-btn>
-								</v-card-actions>
-							</v-card>
-						</v-dialog>
+           
 		</v-container>
 			<v-snackbar
         v-model="snackbar"
@@ -196,7 +96,6 @@ export default {
 		absolute: true,
 		loading: false,
 		edit: true,
-		dialog: false,
         dataList: [],
 		dataCategory: [],
 		headers: 
@@ -379,7 +278,6 @@ export default {
 			this.edit = false;
 			this.editedIndex = this.dataList.indexOf(item);
 			this.editedItem = Object.assign({}, item);
-			this.dialog = true;
 		},
 
 		deleteItem(item) 
@@ -391,7 +289,6 @@ export default {
 
 		close() 
 		{
-			this.dialog = false;
 			this.loading = false;
 			setTimeout(() => {
 				this.editedItem = Object.assign({}, this.defaultItem);

@@ -9,6 +9,7 @@ import categorylist from "./components/dashboard/category/CategoryList.vue"
 
 import blog from "./components/dashboard/Blog/Home.vue"
 import bloglist from "./components/dashboard/Blog/BlogList.vue"
+import postadd from "./components/dashboard/Blog/Add.vue"
 import blogreply from "./components/dashboard/Blog/BlogReply.vue"
 
 import setting from "./components/dashboard/setting/Home.vue"
@@ -70,6 +71,17 @@ export default new Router({
                     }
                 },
                 {
+                    path: "add",
+                    name: "postadd",
+                    component: postadd,
+                    meta: {
+                        icon: "class",
+                        title: "Add ",
+                        type: onlyAdmin,
+                        status: true
+                    }
+                },
+                {
                     path: "blogreply",
                     name: "blogreply",
                     component: blogreply,
@@ -80,6 +92,7 @@ export default new Router({
                         status: true
                     }
                 },
+
             ]
         },
         {

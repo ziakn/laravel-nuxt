@@ -13,20 +13,6 @@
  */
 
 /*!
- * Quill Editor v1.3.7
- * https://quilljs.com/
- * Copyright (c) 2014, Jason Chen
- * Copyright (c) 2013, salesforce.com
- */
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <http://feross.org>
- * @license  MIT
- */
-
-/*!
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
@@ -35,12 +21,6 @@
 /*! !!../../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./materialdesignicons.css */
 
 /*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./material-design-icons.css */
-
-/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.bubble.css */
-
-/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.core.css */
-
-/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./quill.snow.css */
 
 /*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */
 
@@ -52,6 +32,8 @@
 
 /*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */
 
+/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Add.vue?vue&type=script&lang=js& */
+
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogList.vue?vue&type=script&lang=js& */
 
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogReply.vue?vue&type=script&lang=js& */
@@ -59,6 +41,8 @@
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CategoryList.vue?vue&type=script&lang=js& */
 
 /*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Profile.vue?vue&type=script&lang=js& */
+
+/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Add.vue?vue&type=template&id=d043a84c& */
 
 /*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlogList.vue?vue&type=template&id=41220977& */
 
@@ -169,6 +153,10 @@
 /*! ./../helpers/parseHeaders */
 
 /*! ./../utils */
+
+/*! ./Add.vue?vue&type=script&lang=js& */
+
+/*! ./Add.vue?vue&type=template&id=d043a84c& */
 
 /*! ./BlogList.vue?vue&type=script&lang=js& */
 
@@ -509,6 +497,8 @@
 /*! ./common/LeftBar */
 
 /*! ./components/ExampleComponent.vue */
+
+/*! ./components/dashboard/Blog/Add.vue */
 
 /*! ./components/dashboard/Blog/BlogList.vue */
 
@@ -980,13 +970,13 @@
 
 /*! @mdi/font/css/materialdesignicons.css */
 
+/*! For license information please see ckeditor.js.LICENSE.txt */
+
 /*! axios */
 
 /*! babel-polyfill */
 
-/*! base64-js */
-
-/*! buffer */
+/*! ckeditor4-vue */
 
 /*! core-js/fn/regexp/escape */
 
@@ -996,25 +986,11 @@
 
 /*! es6-promise */
 
-/*! ieee754 */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
-
-/*! isarray */
-
 /*! lodash */
 
 /*! material-design-icons-iconfont/dist/material-design-icons.css */
 
 /*! process/browser */
-
-/*! quill */
-
-/*! quill/dist/quill.bubble.css */
-
-/*! quill/dist/quill.core.css */
-
-/*! quill/dist/quill.snow.css */
 
 /*! regenerator-runtime */
 
@@ -1023,8 +999,6 @@
 /*! vue */
 
 /*! vue-moment */
-
-/*! vue-quill-editor */
 
 /*! vue-router */
 
@@ -1035,6 +1009,16 @@
 /*! vuetify/lib/util/colors */
 
 /*! vuex */
+
+/*!*
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md.
+ */
+
+/*!*
+* @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+* For licensing, see LICENSE.md.
+*/
 
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -1065,20 +1049,8 @@
   \*************************************/
 
 /*!**************************************!*\
-  !*** ./node_modules/buffer/index.js ***!
-  \**************************************/
-
-/*!**************************************!*\
   !*** ./node_modules/core-js/shim.js ***!
   \**************************************/
-
-/*!***************************************!*\
-  !*** ./node_modules/ieee754/index.js ***!
-  \***************************************/
-
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
-  \***************************************/
 
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -1093,20 +1065,12 @@
   \*****************************************/
 
 /*!*****************************************!*\
-  !*** ./node_modules/base64-js/index.js ***!
-  \*****************************************/
-
-/*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
   \*****************************************/
 
 /*!*****************************************!*\
   !*** ./resources/js/plugins/vuetify.js ***!
   \*****************************************/
-
-/*!******************************************!*\
-  !*** ./node_modules/quill/dist/quill.js ***!
-  \******************************************/
 
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
@@ -1188,14 +1152,6 @@
   !*** ./node_modules/core-js/modules/_typed.js ***!
   \************************************************/
 
-/*!************************************************!*\
-  !*** ./node_modules/quill/dist/quill.core.css ***!
-  \************************************************/
-
-/*!************************************************!*\
-  !*** ./node_modules/quill/dist/quill.snow.css ***!
-  \************************************************/
-
 /*!*************************************************!*\
   !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
   \*************************************************/
@@ -1270,10 +1226,6 @@
 
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/es7.asap.js ***!
-  \**************************************************/
-
-/*!**************************************************!*\
-  !*** ./node_modules/quill/dist/quill.bubble.css ***!
   \**************************************************/
 
 /*!***************************************************!*\
@@ -1418,6 +1370,10 @@
 
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/ckeditor4-vue/dist/ckeditor.js ***!
   \*****************************************************/
 
 /*!*****************************************************!*\
@@ -1862,6 +1818,10 @@
 
 /*!********************************************************!*\
   !*** ./resources/js/components/common/ToolbarLeft.vue ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./resources/js/components/dashboard/Blog/Add.vue ***!
   \********************************************************/
 
 /*!*********************************************************!*\
@@ -2456,10 +2416,6 @@
   !*** ./node_modules/core-js/modules/es6.typed.uint32-array.js ***!
   \****************************************************************/
 
-/*!****************************************************************!*\
-  !*** ./node_modules/vue-quill-editor/dist/vue-quill-editor.js ***!
-  \****************************************************************/
-
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/modules/_new-promise-capability.js ***!
   \*****************************************************************/
@@ -2704,6 +2660,10 @@
   !*** ./resources/js/components/common/ToolbarLeft.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************/
 
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/dashboard/Blog/Add.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/common/Footer.vue?vue&type=template&id=4e50fea4& ***!
   \**********************************************************************************/
@@ -2746,6 +2706,10 @@
 
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/common/ToolbarLeft.vue?vue&type=template&id=70632e69& ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/dashboard/Blog/Add.vue?vue&type=template&id=d043a84c& ***!
   \***************************************************************************************/
 
 /*!***************************************************************************************!*\
@@ -2804,18 +2768,6 @@
   !*** ./resources/js/components/dashboard/category/CategoryList.vue?vue&type=template&id=1e5ac097& ***!
   \****************************************************************************************************/
 
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.core.css ***!
-  \********************************************************************************************************************************************************************************************************/
-
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.snow.css ***!
-  \********************************************************************************************************************************************************************************************************/
-
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/quill/dist/quill.bubble.css ***!
-  \**********************************************************************************************************************************************************************************************************/
-
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/Footer.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************/
@@ -2857,6 +2809,10 @@
   \*************************************************************************************************************************************************************************************************************************/
 
 /*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Blog/Add.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+
+/*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/Footer.vue?vue&type=template&id=4e50fea4& ***!
   \*************************************************************************************************************************************************************************************************************************/
 
@@ -2894,6 +2850,10 @@
 
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/common/ToolbarLeft.vue?vue&type=template&id=70632e69& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard/Blog/Add.vue?vue&type=template&id=d043a84c& ***!
   \******************************************************************************************************************************************************************************************************************************/
 
 /*!*******************************************************************************************************************************************************************************************************************************!*\
