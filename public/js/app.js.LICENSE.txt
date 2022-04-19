@@ -1,5 +1,5 @@
 /*!
-  * vue-router v3.5.1
+  * vue-router v3.5.3
   * (c) 2021 Evan You
   * @license MIT
   */
@@ -130,6 +130,8 @@
 
 /*! ../helpers/isAbsoluteURL */
 
+/*! ../helpers/validator */
+
 /*! ../utils */
 
 /*! ./../../common/Breadcrumbs */
@@ -142,7 +144,11 @@
 
 /*! ./../../common/ToolbarLeft */
 
+/*! ./../../package.json */
+
 /*! ./../core/settle */
+
+/*! ./../defaults */
 
 /*! ./../helpers/buildURL */
 
@@ -517,6 +523,8 @@
 /*! ./core.get-iterator-method */
 
 /*! ./core/Axios */
+
+/*! ./core/enhanceError */
 
 /*! ./core/mergeConfig */
 
@@ -990,7 +998,7 @@
 
 /*! material-design-icons-iconfont/dist/material-design-icons.css */
 
-/*! process/browser */
+/*! process/browser.js */
 
 /*! regenerator-runtime */
 
@@ -1009,11 +1017,6 @@
 /*! vuetify/lib/util/colors */
 
 /*! vuex */
-
-/*!*
- * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md.
- */
 
 /*!*
 * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
@@ -1062,6 +1065,10 @@
 
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/utils.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/axios/package.json ***!
   \*****************************************/
 
 /*!*****************************************!*\
@@ -1370,6 +1377,10 @@
 
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/validator.js ***!
   \*****************************************************/
 
 /*!*****************************************************!*\
